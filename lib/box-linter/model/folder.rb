@@ -5,5 +5,19 @@ class BoxLinter::Model::Folder < BoxLinter::Model::AbstractEntry
 
   def initialize(result)
     super(result)
+    @children = []
+    result.entries.each do |e|
+      @children << { id: e.id, type: e.type }
+    end
+  end
+
+  # return child entries instance
+  def children
+    instances = []
+    @children.each do |c|
+      instances << BoxLinter::Client.find(c[:id], c[:type])
+    end
+
+    instances
   end
 end

@@ -9,6 +9,7 @@ class BoxLinter::Model::AbstractEntry
     #             content_modified_at: 'date',
     #           }
 
+    @id = result.id.to_i
     @name = result.name
     @parent = result.parent
     @created_at = result.content_created_at
