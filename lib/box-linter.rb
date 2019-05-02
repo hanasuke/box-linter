@@ -8,7 +8,7 @@ Dotenv.load
 
 # monkeypatch for BoxrMash
 class BoxrMash
-  def entries
+  def children
     self["item_collection"]["entries"]
   end
 end
