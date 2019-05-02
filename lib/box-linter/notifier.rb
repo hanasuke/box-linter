@@ -40,6 +40,6 @@ class Notifier
       value << "#{k.to_s.split('_')[0]}の設定が誤っています"
     end
 
-    value.join('\n')
+    value.join("\n")
   end
 end
