@@ -1,6 +1,6 @@
 # box linter
 
-<img src="https://raw.githubusercontent.com/hanasuke/box-test/master/image/screenshot.png" witdth="300">
+<img src="https://raw.githubusercontent.com/hanasuke/box-linter/master/image/screenshot.png" height="300">
 
 ## How To Use
 ### Settings on box.com
@@ -9,7 +9,8 @@
 
 ### Execution
 1. copy `.env` from `.env.sample`
-2. put your variables in `.env` from [developer console](https://app.box.com/developers/console)
+    * [box developer console](https://app.box.com/developers/console)
+    * [slack incoming webhook](https://api.slack.com/incoming-webhooks)
 3. `bundle install`
 4. `bundle exec ruby exec.rb`
 
