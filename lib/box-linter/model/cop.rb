@@ -13,25 +13,28 @@ class BoxLinter::Model::Cop
   def check
     sibiling = BoxLinter::Client.find(@parent).children
 
-    warnings = []
+    warning = {
+        id: @parent.id,
+        name: @parent.name,
+        alerts: []
+    }
 
     sibiling.each do |s|
-      p s
-      w = {id: s.id}
       next if s.id == @id
       next unless @rules[:ignore_pattern].select{ |r| r === s.name }.empty?
+      w = {id: s.id, name: s.name}
 
       if @rules[:description] && s.description.empty?
-        w[:description] = true
+        w[:description_failure] = true
       end
 
-      if @rules[:name] && ! @rules[:name] =~ s.name
-        w[:name] = true
+      if @rules[:name] && ! @rules[:name].match?(s.name)
+        w[:name_failure] = true
       end
-      warnings << w
+      warning[:alerts] << w
     end
 
-    warnings
+    warning
   end
 
   private
