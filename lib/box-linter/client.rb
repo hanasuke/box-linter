@@ -11,4 +11,11 @@ class BoxLinter::Client
              end
     BoxLinter::EntryFactory.generate(result)
   end
+
+  # download file
+  def self.downlad(id)
+    client = Boxr::Client.new
+    param = Hashie::Mash.new({id: id})
+    client.download_file(param)
+  end
 end
