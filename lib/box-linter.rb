@@ -17,6 +17,5 @@ module BoxLinter; end
 
 #p Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).sort
 Dir.glob(File.join(File.dirname(__FILE__), '**/*.rb')).sort.each do |f|
-  p f
   require f
 end
