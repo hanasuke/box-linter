@@ -1,0 +1,1 @@
+module BoxLinter::Model; end
