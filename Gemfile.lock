@@ -1,11 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.3)
+    activesupport (6.0.6.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     awesome_print (1.8.0)
@@ -17,15 +18,15 @@ GEM
     bson (4.4.2)
     byebug (11.0.1)
     coderay (1.1.2)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.2.0)
     dotenv (2.7.2)
     hashie (3.6.0)
     httpclient (2.8.3)
-    i18n (1.6.0)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jwt (1.5.6)
     method_source (0.9.2)
-    minitest (5.11.3)
+    minitest (5.17.0)
     mongo (2.8.0)
       bson (>= 4.4.2, < 5.0.0)
     pry (0.12.2)
@@ -37,8 +38,9 @@ GEM
     public_suffix (3.0.3)
     slack-incoming-webhooks (0.2.0)
     thread_safe (0.3.6)
-    tzinfo (1.2.5)
+    tzinfo (1.2.11)
       thread_safe (~> 0.1)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
